@@ -3,10 +3,12 @@ import { connect } from 'react-redux'
 import { promiseThunkAction1 } from '../../actions/thunks'
 import Link from '../../components/Link'
 import type { Props } from '../../components/Link'
-import type { State, Dispatch } from '../../types'
+import type { State, Dispatch, VisibilityFilter } from '../../types'
 import type { Connector } from 'react-redux'
 
-type OwnProps = {};
+type OwnProps = {
+  filter: VisibilityFilter
+};
 
 const mapStateToProps = (state: State, ownProps) => {
   return {

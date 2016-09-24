@@ -29,12 +29,12 @@ const Footer = () => (
 
     <SomeWrappedClass message="some wrapped todo task" />
 
-    <RunSyncThunk>
+    <RunSyncThunk filter="SHOW_ALL">
       Run Sync Thunk
     </RunSyncThunk>
 
     {", "}
-    <RunAsyncThunk>
+    <RunAsyncThunk filter="SHOW_ALL">
       Run Async Thunk
     </RunAsyncThunk>
   </div>
