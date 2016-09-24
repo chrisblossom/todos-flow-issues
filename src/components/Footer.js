@@ -16,20 +16,17 @@ const Footer = () => (
   <div>
     <ChildrenContext>
       <UseContext message="UseContext" />
+
       <UseWrappedContext /> {/* prop check doesn't work */}
       <UseWrappedContext message="UseWrappedContext" />
 
-      <SomeClassWithContext /> {/* prop check doesn't work */}
       <SomeClassWithContext message="SomeClassWithContext" />
 
-      <SomeWrappedClassWithContext /> {/* prop check doesn't work */}
       <SomeWrappedClassWithContext message="SomeWrappedClassWithContext" />
     </ChildrenContext>
 
-    <SomeClass /> {/* prop check doesn't work */}
     <SomeClass message="some todo task" />
 
-    <SomeWrappedClass /> {/* prop check doesn't work */}
     <SomeWrappedClass message="some wrapped todo task" />
 
     <RunSyncThunk>

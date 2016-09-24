@@ -11,6 +11,7 @@ import type { Dispatch } from '../../types';
 
 type PropsType = {
   dispatch: Dispatch,
+  message: string,
 };
 
 type OwnPropsType = {
