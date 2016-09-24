@@ -1,4 +1,6 @@
 // @flow
+import { promiseThunkAction1, thunkAction1 } from '../actions/thunks';
+
 import type { Store as ReduxStore, Dispatch as ReduxDispatch } from 'redux'
 
 export type Id = number;
@@ -32,6 +34,11 @@ export type Action =
 
 export type Store = ReduxStore<State, Action>;
 
-export type Dispatch = ReduxDispatch<Action>;
+// export type Dispatch = ReduxDispatch<Action>;
 
 export type GetState = () => State;
+
+export type Dispatch = ReduxDispatch<Action> &
+  (thunk: typeof thunkAction1) => string &
+    (thunk: typeof promiseThunkAction1) => Promise<string>;
+
