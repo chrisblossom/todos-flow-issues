@@ -37,8 +37,8 @@ export type Store = ReduxStore<State, Action>;
 // export type Dispatch = ReduxDispatch<Action>;
 
 export type GetState = () => State;
+type Thunk<A> = (thunk: (dispatch: Dispatch, getState: GetState) => A) => A;
 
 export type Dispatch = ReduxDispatch<Action> &
-  (thunk: typeof thunkAction1) => string &
-    (thunk: typeof promiseThunkAction1) => Promise<string>;
-
+  Thunk<string> &
+  Thunk<Promise<string>>;
