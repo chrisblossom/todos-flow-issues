@@ -17,7 +17,7 @@ const Footer = () => (
     <ChildrenContext>
       <UseContext message="UseContext" />
 
-      <UseWrappedContext /> {/* prop check doesn't work */}
+      {/*<UseWrappedContext /> /!* prop check doesn't work *!/*/}
       <UseWrappedContext message="UseWrappedContext" />
 
       <SomeClassWithContext message="SomeClassWithContext" />
